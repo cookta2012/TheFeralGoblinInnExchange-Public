@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#25130f" />
+    <meta name="description" content="The Feral Goblin Inn — a request-based Magic: The Gathering buy and sell counter." />
+    <title>The Feral Goblin Inn</title>
+    <link rel="preload" as="image" href="/assets/feral_goblin_card_trader_scene-hepE3C_T.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/logo-PBqdpboZ.webp" fetchpriority="high" />
+    <style>
+      html, body { margin: 0; min-height: 100%; background: #140b08; }
+      #boot-loader { position: fixed; inset: 0; z-index: 2147483647; display: grid; place-items: center; background: radial-gradient(circle at 50% 42%, #2b1710 0, #140b08 58%, #0d0705 100%); color: #efd17a; font: 700 14px/1.4 Georgia, serif; letter-spacing: .04em; }
+      #boot-loader__content { display: grid; justify-items: center; gap: 14px; }
+      #boot-loader__spinner { width: 42px; height: 42px; border: 4px solid rgba(239, 209, 122, .2); border-top-color: #efd17a; border-radius: 50%; animation: feral-boot-spin .8s linear infinite; }
+      @keyframes feral-boot-spin { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) { #boot-loader__spinner { animation-duration: 1.8s; } }
+    </style>
+    <script>
+      // Restore the original path after GitHub Pages' 404.html redirects a SPA route to index.html.
+      ;(function (location) {
+        if (location.search.length > 1 && location.search[1] === '/') {
+          var decoded = location.search
+            .slice(1)
+            .split('&')
+            .map(function (value) { return value.replace(/~and~/g, '&') })
+            .join('?')
+
+          window.history.replaceState(
+            null,
+            '',
+            location.pathname.slice(0, -1) + decoded + location.hash,
+          )
+        }
+      })(window.location)
+    </script>
+    <script type="module" crossorigin src="/assets/index-CeVYjbnE.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-M5DF5bxd.css">
+  </head>
+  <body>
+    <div id="boot-loader" role="status" aria-live="polite" aria-label="Loading The Feral Goblin Inn">
+      <div id="boot-loader__content">
+        <div id="boot-loader__spinner" aria-hidden="true"></div>
+        <div>Opening the inn…</div>
+      </div>
+    </div>
+    <div id="root" hidden></div>
+  </body>
+</html>

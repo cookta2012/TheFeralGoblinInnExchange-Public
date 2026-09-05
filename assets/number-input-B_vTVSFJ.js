@@ -1,0 +1,1 @@
+function e(e){return e.replace(/^(-?)0+(?=\d)/,`$1`)}function t(t){t.currentTarget.value=e(t.currentTarget.value)}export{t};
